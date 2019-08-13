@@ -1,0 +1,9 @@
+<%= form_for(@task) do |f| %>
+  <%= f.text_field :title, placeholder: 'Title of the task' %>
+  <%= f.text_field :details, placeholder: 'Details to do' %>
+  <% if @task.id %>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  <% end %>
+  <%= f.submit %>
+<% end %>
